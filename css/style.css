@@ -18,7 +18,7 @@ body{
 }
 #main-header{
     background-color: coral;
-    background-color: #7510f7;
+    background-color: #e91d63;
     font-family: 'Dancing Script', cursive;
     color: #fff;
 }
@@ -92,4 +92,7 @@ body{
 iframe{
     width: 100%;
     min-height: 1000px;
+}
+.all{
+    background-color: #333;
 }
