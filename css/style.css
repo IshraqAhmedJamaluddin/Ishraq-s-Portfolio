@@ -74,6 +74,12 @@ body{
     padding:20px;
     margin-top: 40px;
 }
+.social-media a{
+    font-size: 32px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 15px;
+}
 @media(max-width:600px){
     #main, #sidebar{
         width: 100%;
