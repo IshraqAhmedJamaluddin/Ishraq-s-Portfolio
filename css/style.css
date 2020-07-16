@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+::-moz-selection { /* Code for Firefox */
+    color: #fff;
+    background: #e91d63;
+}
+::selection {
+    color: #fff;
+    background: #e91d63;
+}
+#main-header h1::-moz-selection, #navbar ul::-moz-selection, #navbar a::-moz-selection { /* Code for Firefox */
+    color: #e91d63;
+    background: #fff;
+}
+#main-header h1::selection, #navbar ul::selection, #navbar a::selection {
+    color: #e91d63;
+    background: #fff;
+}
 body{
     background-color: #f4f4f4;
     color: #555;
