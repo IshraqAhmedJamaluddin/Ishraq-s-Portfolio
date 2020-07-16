@@ -85,4 +85,11 @@ body{
         width: 100%;
         float: none;
     }
+    .res{
+        width: 100%;
+    }
+}
+iframe{
+    width: 100%;
+    min-height: 1000px;
 }
