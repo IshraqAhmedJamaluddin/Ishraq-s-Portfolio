@@ -3,15 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ishraq's Portfolio</title>
+    <title>Ishraq Ahmed Jamaluddin</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css"> -->
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/brands.min.css">
+    <link rel="stylesheet" href="css/fontawesome-free-6.4.0-web/css/solid.min.css">
     <link rel="icon" href="images/qaf-pink.png">
 </head>
 <body>
     <header id="main-header">
         <div class="container">
-            <h1>Ishraq's Portfolio</h1>
+            <h1>Ishraq Ahmed Jamaluddin</h1>
         </div>
     </header>
     
@@ -24,9 +27,63 @@
             </ul>
         </div>
     </nav>
-    <div class="CardContainer">
+
+    <div class="tabs">
+        <div class="container">
+            <ul>
+                <li class="tablinks active" onclick="openTab(event, 'ML')">Machine Learning</li>
+                <li style="background-color: #e91d63; padding: 1em .1em 1em .1em;"></li>
+                <li class="tablinks" onclick="openTab(event, 'web')">Web Dev</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="CardContainer tabcontent" id="ML">
+        <a href="https://github.com/IshraqAhmedJamaluddin/Weather-Dashboard-Plotly" target="_blank">
+            <div class="card">
+                <!-- 420x310 -->
+                <!-- 500x500 -->
+                <video autoplay loop muted playsinline src="vids/dash.mkv" alt="Avatar" style="width:100%"></video>
+                <div class="container">
+                    <h4><b><a href="https://github.com/IshraqAhmedJamaluddin/Weather-Dashboard-Plotly" target="_blank">Weather Dashboard</a></b></h4>
+                    <p>A dashboard using <a href="https://plotly.com/dash">plotly-dash</a> showing the weather for current day and 7 days following.</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/IshraqAhmedJamaluddin/ML1" target="_blank">
+            <div class="card">
+                <video autoplay loop muted playsinline src="vids/ML1-sped-up.mkv" alt="Avatar" style="width:100%"></video>
+                <div class="container">
+                    <h4><b><a href="https://github.com/IshraqAhmedJamaluddin/ML1" target="_blank">Head Pose Estimation</a></b></h4>
+                    <p>Using 2D landmarks, AFLW2000 dataset & mediapipe, then applying the different machine learning algorithms.</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/Heba-Atef99/Air-Passengers-Time-Series" target="_blank">
+            <div class="card">
+                <img src="images/Time-Series.png" alt="Avatar" style="width:100%">
+                <div class="container">
+                    <h4><b><a href="https://github.com/Heba-Atef99/Air-Passengers-Time-Series" target="_blank">Air Passenger Time Series Analysis and Forecasting</a></b></h4>
+                    <p>A time series data project that applies most of the concepts of Time Series Analysis and Forecasting.</p>
+                </div>
+            </div>
+        </a>
+        <a href="https://github.com/IshraqAhmedJamaluddin/Travelling-salesman-problem-using-some-Random-Search-Algorithms" target="_blank">
+            <div class="card">
+                <video autoplay loop muted playsinline src="vids/TSP-sped-up.mkv" alt="Avatar" style="width:100%"></video>
+                <div class="container">
+                    <h4><b><a href="https://github.com/IshraqAhmedJamaluddin/Travelling-salesman-problem-using-some-Random-Search-Algorithms" target="_blank">Travelling Salesman</a></b></h4>
+                    <p>Travelling salesman problem using some Random Search Algorithms (NN, GA & ACO).</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="CardContainer tabcontent" id="web" style="display: none;">
         <a href="https://omgwhatisthat.000webhostapp.com/" target="_blank">
             <div class="card">
+                <!-- 420x310 -->
+                <!-- 500x500 -->
                 <img src="images/touristopia.png" alt="Avatar" style="width:100%">
                 <div class="container">
                     <h4><b><a href="https://omgwhatisthat.000webhostapp.com/" target="_blank">TourisTopia</a></b></h4>
@@ -128,21 +185,44 @@
     <footer id="main-footer">
         <div class="social-media">
             <a href="mailto:ishraqahmedjamaluddin@gmail.com" target="_blank">
-                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
             </a>
             <a href="https://github.com/IshraqAhmedJamaluddin" target="_blank">
-                <i class="fa fa-github" aria-hidden="true"></i>
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
             </a>
             <a href="https://www.linkedin.com/in/ishraqahmedjamaluddin/" target="_blank">
-                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
             </a>
             <a href="https://www.facebook.com/ishraqahmedjamaluddin" target="_blank">
-                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+                <i class="fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.kaggle.com/ishraqahmed" target="_blank">
+                <i class="fa-brands fa-kaggle" aria-hidden="true"></i>
             </a>
         </div>
         <div class="copyrights">
-            <p>Copyright &copy; 2020 Ishraq's Portfolio</p>
+            <p>Copyright &copy; 2023 Ishraq's Portfolio</p>
         </div>
     </footer>
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Get all elements with class="tablinks" and remove the class "active"
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>

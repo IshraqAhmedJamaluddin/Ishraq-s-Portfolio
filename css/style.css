@@ -10,11 +10,11 @@
     color: #fff;
     background: #e91d63;
 }
-#main-header h1::-moz-selection, #navbar ul::-moz-selection, #navbar a::-moz-selection { /* Code for Firefox */
+#main-header h1::-moz-selection, #navbar ul::-moz-selection, #navbar a::-moz-selection, .tabs { /* Code for Firefox */
     color: #e91d63;
     background: #fff;
 }
-#main-header h1::selection, #navbar ul::selection, #navbar a::selection {
+#main-header h1::selection, #navbar ul::selection, #navbar a::selection, .tabs {
     color: #e91d63;
     background: #fff;
 }
@@ -38,25 +38,52 @@ body{
     font-family: 'Dancing Script', cursive;
     color: #fff;
 }
-#navbar{
+#navbar, .tabs{
     background-color: #333;
     color: #fff;
 }
-#navbar ul{
+#navbar ul, .tabs ul{
     padding: 0;
     list-style: none;
 }
-#navbar li{
+#navbar li, .tabs li{
     display: inline;
 }
-#navbar a{
+#navbar a, .tabs a{
     color: #fff;
     text-decoration: none;
     padding-right: 15px;
     font-size: 18px;
 }
+.tabs {
+    background-color: #555;
+}
+.tabs li {
+    padding: 1em 5em 1em 1em;
+    cursor: pointer;
+}
+.tabs li.active {
+    font-weight: bolder;
+    text-shadow: #333;
+    background-color: #333;
+}
+.tabs ul{
+    margin: 0;
+    padding: .4em;
+}
+.tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+/* Go from zero to full opacity */
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
 #showcase {
-    background-image: url(../images/showcase.jpg);
+    background-color: #333;
+    /* background-image: url(../images/smoke.gif); */
+    background-image: url(../images/bg2.jpg);
     background-size: cover;
     background-position: center center;
     min-height: 300px;
@@ -78,7 +105,7 @@ body{
 #sidebar{
     float: right;
     width: 30%;
-    background: #333;
+    /* background: #333; */
     color: #fff;
     box-sizing: border-box;
 }
@@ -104,9 +131,9 @@ body{
         width: 100%;
     }
 }
-iframe{
+object{
     width: 100%;
-    min-height: 1000px;
+    min-height: 100vh;
 }
 .all{
     background-color: #333;
@@ -114,6 +141,7 @@ iframe{
 .me{
     width: 100%;
     margin: 0px 0px -7px 0px;
+    border-radius: .5em;
 }
 .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -125,7 +153,7 @@ iframe{
     margin-left: auto;
     margin-right: auto;
 }
-.card img {
+.card img, .card video {
     border-radius: 5px 5px 0 0;
 }
 .card:hover {
