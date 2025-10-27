@@ -90,6 +90,45 @@ Maintains the original color scheme with pink (#e91d63) as primary and dark (#33
 
 Smooth hover effects, transitions, and animations throughout the site for a polished feel.
 
+## Deployment
+
+### GitHub Pages
+
+This project is configured for automatic deployment to GitHub Pages using GitHub Actions.
+
+#### Setup Instructions:
+
+1. **Enable GitHub Pages** in your repository:
+
+   - Go to your repository on GitHub
+   - Navigate to **Settings** → **Pages**
+   - Under **Source**, select **GitHub Actions**
+
+2. **Push your code** to the main branch:
+
+   ```bash
+   git add .
+   git commit -m "Add GitHub Pages deployment"
+   git push origin main
+   ```
+
+3. The deployment workflow will automatically:
+   - Build your project
+   - Deploy it to GitHub Pages
+   - Your site will be available at `https://<username>.github.io/Ishraq-s-Portfolio/`
+
+#### Manual Trigger
+
+You can also manually trigger the deployment workflow:
+
+- Go to **Actions** tab in your repository
+- Select **Deploy to GitHub Pages**
+- Click **Run workflow**
+
+#### Note
+
+The base URL is configured for the repository name `Ishraq-s-Portfolio`. If you rename your repository, update the `base` path in `vite.config.ts`.
+
 ## License
 
 © 2025 Ishraq Ahmed Jamaluddin
