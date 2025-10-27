@@ -1,0 +1,12 @@
+.profile-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(233, 29, 99, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(233, 29, 99, 0.3);
+}
