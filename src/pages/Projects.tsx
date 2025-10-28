@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Container, Box, Tabs, Tab, Typography } from "@mui/material";
 import ProjectCards from "../components/ProjectCards";
 
+// Get the base URL for assets
+const getAssetUrl = (path: string) => {
+  return import.meta.env.BASE_URL + path.substring(1);
+};
+
 interface Project {
   title: string;
   description: string;
@@ -10,49 +15,46 @@ interface Project {
   link: string;
 }
 
-// Helper function to get the correct path with base URL
-const getPath = (path: string) => import.meta.BASE_URL + path.substring(1);
-
 const mlProjects: Project[] = [
   {
     title: "AI Girlfriend",
     description: "An AI-powered conversational companion application.",
-    image: getPath("/images/ai-girlfriend.png"),
+    image: getAssetUrl("/images/ai-girlfriend.png"),
     link: "https://ishraqahmedjamaluddin.github.io/ai-girlfriend/",
   },
   {
     title: "Chatbot",
     description:
       "An interactive chatbot application with advanced conversational capabilities.",
-    image: getPath("/images/chatbot.png"),
+    image: getAssetUrl("/images/chatbot.png"),
     link: "https://ishraqahmedjamaluddin.github.io/chatbot/",
   },
   {
     title: "Weather Dashboard",
     description:
       "A dashboard using plotly-dash showing the weather for current day and 7 days following.",
-    video: getPath("/vids/dash.mp4"),
+    video: getAssetUrl("/vids/dash.mp4"),
     link: "https://github.com/IshraqAhmedJamaluddin/Weather-Dashboard-Plotly",
   },
   {
     title: "Head Pose Estimation",
     description:
       "Using 2D landmarks, AFLW2000 dataset & mediapipe, then applying different machine learning algorithms.",
-    video: getPath("/vids/ML1-sped-up.mp4"),
+    video: getAssetUrl("/vids/ML1-sped-up.mp4"),
     link: "https://github.com/IshraqAhmedJamaluddin/ML1",
   },
   {
     title: "Air Passenger Time Series Analysis and Forecasting",
     description:
       "A time series data project that applies most of the concepts of Time Series Analysis and Forecasting.",
-    image: getPath("/images/Time-Series.png"),
+    image: getAssetUrl("/images/Time-Series.png"),
     link: "https://github.com/Heba-Atef99/Air-Passengers-Time-Series",
   },
   {
     title: "Travelling Salesman",
     description:
       "Travelling salesman problem using some Random Search Algorithms (NN, GA & ACO).",
-    video: getPath("/vids/TSP-sped-up.mp4"),
+    video: getAssetUrl("/vids/TSP-sped-up.mp4"),
     link: "https://github.com/IshraqAhmedJamaluddin/Travelling-salesman-problem-using-some-Random-Search-Algorithms",
   },
 ];
@@ -62,69 +64,69 @@ const webProjects: Project[] = [
     title: "TourisTopia",
     description:
       "I implemented a full-stack website from scratch from a design mockup made by Mazen Shebeta.",
-    image: getPath("/images/touristopia.png"),
+    image: getAssetUrl("/images/touristopia.png"),
     link: "https://omgwhatisthat.000webhostapp.com/",
   },
   {
     title: "Food",
     description: "Just an interface of a food ordering website.",
-    image: getPath("/images/food.png"),
+    image: getAssetUrl("/images/food.png"),
     link: "https://ishraqahmedjamaluddin.github.io/food/",
   },
   {
     title: "web folk",
     description: "A college project using bootstrap.",
-    image: getPath("/images/webfolk.jpg"),
+    image: getAssetUrl("/images/webfolk.jpg"),
     link: "https://ishraqahmedjamaluddin.github.io/web-folk/",
   },
   {
     title: "Grocery list",
     description: "A college team project using bootstrap.",
-    image: getPath("/images/grocery_list.jpg"),
+    image: getAssetUrl("/images/grocery_list.jpg"),
     link: "https://github.com/OmniaRafat232111121/Grocey_list",
   },
   {
     title: "Tic-Tac-Toe",
     description: "A college project tic_tac_toe game.",
-    image: getPath("/images/TicTacToe.jpg"),
+    image: getAssetUrl("/images/TicTacToe.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/tic_tac_toe",
   },
   {
     title: "To do App",
     description: "A todo app using python flask.",
-    image: getPath("/images/python_todo.jpg"),
+    image: getAssetUrl("/images/python_todo.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/python-todoapp",
   },
   {
     title: "To do App",
     description: "A todo app using php laravel.",
-    image: getPath("/images/phptodo.jpg"),
+    image: getAssetUrl("/images/phptodo.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/php-todo",
   },
   {
     title: "Posty",
     description: "A social media app using php laravel.",
-    image: getPath("/images/posty.jpg"),
+    image: getAssetUrl("/images/posty.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/posty",
   },
   {
     title: "Hire Me",
     description:
       "A Solution Challenge Project that helps fresh grads and undergrads be well prepared for the labour market.",
-    image: getPath("/images/HireMe.jpg"),
+    image: getAssetUrl("/images/HireMe.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/Hire-Me",
   },
   {
     title: "Twitter Clone",
     description: "This is a twitter clone using react and redux.",
-    image: getPath("/images/twitter.jpg"),
+    image: getAssetUrl("/images/twitter.jpg"),
     link: "https://github.com/IshraqAhmedJamaluddin/reactnd-twitter-clone",
   },
   {
     title: "Drive Portfolio",
     description:
       "My personal google drive Portfolio that includes various projects using various programming languages and tools.",
-    image: getPath("/images/driveLogo.png"),
+    image: getAssetUrl("/images/driveLogo.png"),
     link: "https://drive.google.com/open?id=1TzeIsleE8hsxjcUuSrUXCZzfNFnBt4R-",
   },
 ];
