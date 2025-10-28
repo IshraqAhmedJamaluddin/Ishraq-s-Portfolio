@@ -4,6 +4,9 @@ import "./Home.css";
 
 const LazyImage = lazy(() => import("../components/LazyImage"));
 
+// Helper function to get the correct path with base URL
+const getPath = (path: string) => import.meta.BASE_URL + path.substring(1);
+
 const Home = () => {
   return (
     <>
@@ -12,7 +15,7 @@ const Home = () => {
         sx={{
           position: "relative",
           minHeight: { xs: "250px", md: "400px" },
-          backgroundImage: "url(/images/bg2.jpg)",
+          backgroundImage: `url(${getPath("/images/bg2.jpg")})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundAttachment: { xs: "scroll", md: "fixed" },
@@ -72,7 +75,7 @@ const Home = () => {
                 fallback={<Box sx={{ height: 400, bgcolor: "#ddd" }} />}
               >
                 <LazyImage
-                  src="/images/headshot.jpg"
+                  src={getPath("/images/headshot.jpg")}
                   alt="Ishraq Ahmed Jamaluddin"
                   className="profile-image"
                 />
