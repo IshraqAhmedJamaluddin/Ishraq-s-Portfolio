@@ -1,4 +1,4 @@
-import { Container, Box, Typography, Grid } from "@mui/material";
+import { Container, Box, Typography, Grid, Chip } from "@mui/material";
 import { lazy, Suspense } from "react";
 import "./Home.css";
 
@@ -98,6 +98,92 @@ const Home = () => {
             >
               My name is Ishraq, which means Sunshine in Arabic
             </Typography>
+            
+            {/* 3Cs Highlight Section */}
+            <Box
+              sx={{
+                mb: 4,
+                p: 3,
+                borderRadius: 3,
+                background: "linear-gradient(135deg, rgba(233, 29, 99, 0.1) 0%, rgba(233, 29, 99, 0.05) 100%)",
+                border: "2px solid",
+                borderColor: "primary.main",
+                borderStyle: "dashed",
+                display: "flex",
+                flexDirection: { xs: "column", sm: "row" },
+                alignItems: "center",
+                justifyContent: "center",
+                gap: 2,
+                flexWrap: "wrap",
+              }}
+            >
+              <Typography
+                variant="h4"
+                sx={{
+                  fontWeight: 700,
+                  color: "primary.main",
+                  fontSize: { xs: "1.3rem", md: "1.8rem" },
+                  textAlign: "center",
+                }}
+              >
+                I love the 3Cs:
+              </Typography>
+              <Box
+                sx={{
+                  display: "flex",
+                  gap: 1.5,
+                  flexWrap: "wrap",
+                  justifyContent: "center",
+                }}
+              >
+                <Chip
+                  label="🐱 Cats"
+                  sx={{
+                    fontSize: { xs: "1rem", md: "1.1rem" },
+                    fontWeight: 600,
+                    height: { xs: 36, md: 40 },
+                    bgcolor: "primary.main",
+                    color: "white",
+                    "&:hover": {
+                      bgcolor: "primary.dark",
+                      transform: "scale(1.05)",
+                    },
+                    transition: "all 0.3s ease",
+                  }}
+                />
+                <Chip
+                  label="☕ Coffee"
+                  sx={{
+                    fontSize: { xs: "1rem", md: "1.1rem" },
+                    fontWeight: 600,
+                    height: { xs: 36, md: 40 },
+                    bgcolor: "primary.main",
+                    color: "white",
+                    "&:hover": {
+                      bgcolor: "primary.dark",
+                      transform: "scale(1.05)",
+                    },
+                    transition: "all 0.3s ease",
+                  }}
+                />
+                <Chip
+                  label="💻 Coding"
+                  sx={{
+                    fontSize: { xs: "1rem", md: "1.1rem" },
+                    fontWeight: 600,
+                    height: { xs: 36, md: 40 },
+                    bgcolor: "primary.main",
+                    color: "white",
+                    "&:hover": {
+                      bgcolor: "primary.dark",
+                      transform: "scale(1.05)",
+                    },
+                    transition: "all 0.3s ease",
+                  }}
+                />
+              </Box>
+            </Box>
+
             <Typography variant="body1" sx={{ mb: 3, color: "text.secondary" }}>
               During my college years, I learned many CS skills from lectures as
               I used to study out of passion and love for the field. I gained
